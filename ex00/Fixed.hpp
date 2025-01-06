@@ -7,10 +7,10 @@
 class Fixed {
 	public:
 		Fixed();
-		Fixed(Fixed const &src);
+		Fixed(Fixed const &source);
 		~Fixed();
 
-		Fixed&	operator=(Fixed const &rSym);
+		Fixed&	operator=(Fixed const &original_copy);
 		int		getRawBits(void) const;
 		void	setRawBits(int const raw);
 
