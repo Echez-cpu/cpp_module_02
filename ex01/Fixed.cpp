@@ -48,7 +48,7 @@ int		Fixed::toInt() const {
 	return this->value >> bits;
 }
 
-std::ostream&	operator<<(std::ostream& o, Fixed const &original_copy) {
+std::ostream&	operator<<(std::ostream& o, Fixed const &original_copy) {   // Returning the output stream by reference allows us to chain multiple << operations together
 	o << original_copy.toFloat();
 	return o;
 }
