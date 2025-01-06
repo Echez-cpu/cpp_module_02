@@ -6,12 +6,12 @@
 class Fixed {
 	public:
 		Fixed();
-		Fixed(Fixed const &src);
+		Fixed(Fixed const &source);
 		Fixed(const int n);
 		Fixed(const float f);
 		~Fixed();
 
-		Fixed&	operator=(Fixed const &rSym);
+		Fixed&	operator=(Fixed const &original_copy);
 		int		getRawBits() const;
 		void	setRawBits(int const raw);
 		float	toFloat() const;
@@ -22,7 +22,7 @@ class Fixed {
 		static const int	bits = 8;
 };
 
-std::ostream&	operator<<(std::ostream& o, Fixed const &rSym);
+std::ostream&	operator<<(std::ostream& o, Fixed const &original_copy);
 
 #endif
 
