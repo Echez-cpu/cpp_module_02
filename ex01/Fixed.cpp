@@ -16,7 +16,7 @@ Fixed::Fixed(const int n) {
 }
 
 Fixed::Fixed(const float f) : value(f) {
-	std::cout << "Float constructor called" << std::endl;   // redundant : value(f) juste testing
+	std::cout << "Float constructor called" << std::endl;   // redundant : value(f) just testing
 	this->value = roundf(f * (1 << bits));
 }
 
@@ -28,7 +28,7 @@ Fixed&	Fixed::operator=(Fixed const &original_copy) {
 	std::cout << "Copy assignement operator called" << std::endl;
 	if (this != &original_copy)
 		this->value = original_copy.getRawBits();
-	return *this;
+	return *this;          // Chained assignments allow you to write code like a = b = c;
 }
 
 int		Fixed::getRawBits() const {
