@@ -16,7 +16,7 @@ Fixed::Fixed(const int n) {
 }
 
 Fixed::Fixed(const float f) : value(f) {
-	std::cout << "Float constructor called" << std::endl;
+	std::cout << "Float constructor called" << std::endl;   // redundant : value(f) juste testing
 	this->value = roundf(f * (1 << bits));
 }
 
