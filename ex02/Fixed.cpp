@@ -25,54 +25,54 @@ Fixed&	Fixed::operator=(Fixed const &original_copy) {
 	return *this;
 }
 
-Fixed	Fixed::operator+(Fixed const &rSym) const {
-	return Fixed(this->toFloat() + rSym.toFloat());
+Fixed	Fixed::operator+(Fixed const &rhSide) const {
+	return Fixed(this->toFloat() + rhSide.toFloat());
 }
 
-Fixed	Fixed::operator-(Fixed const &rSym) const {
-	return Fixed(this->toFloat() - rSym.toFloat());
+Fixed	Fixed::operator-(Fixed const &rhSide) const {
+	return Fixed(this->toFloat() - rhSide.toFloat());
 }
 
-Fixed	Fixed::operator*(Fixed const &rSym) const {
-	return Fixed(this->toFloat() * rSym.toFloat());
+Fixed	Fixed::operator*(Fixed const &rhSide) const {
+	return Fixed(this->toFloat() * rhSide.toFloat());
 }
 
-Fixed	Fixed::operator/(Fixed const &rSym) const {
-	return Fixed(this->toFloat() / rSym.toFloat());
+Fixed	Fixed::operator/(Fixed const &rhSide) const {
+	return Fixed(this->toFloat() / rhSide.toFloat());
 }
 
-bool	Fixed::operator<(Fixed const &rSym) const {
-	if (this->getRawBits() < rSym.getRawBits())
+bool	Fixed::operator<(Fixed const &compareTo) const {
+	if (this->getRawBits() < compareTo.getRawBits())
 		return true;
 	return false;
 }
 
-bool	Fixed::operator>(Fixed const &rSym) const {
-	if (this->getRawBits() > rSym.getRawBits())
+bool	Fixed::operator>(Fixed const &compareTo) const {
+	if (this->getRawBits() > compareTo.getRawBits())
 		return true;
 	return false;
 }
 
-bool	Fixed::operator<=(Fixed const &rSym) const {
-	if (this->getRawBits() <= rSym.getRawBits())
+bool	Fixed::operator<=(Fixed const &compareTo) const {
+	if (this->getRawBits() <= compareTo.getRawBits())
 		return true;
 	return false;
 }
 
-bool	Fixed::operator>=(Fixed const &rSym) const {
-	if (this->getRawBits() >= rSym.getRawBits())
+bool	Fixed::operator>=(Fixed const &compareTo) const {
+	if (this->getRawBits() >= compareTo.getRawBits())
 		return true;
 	return false;
 }
 
-bool	Fixed::operator==(Fixed const &rSym) const {
+bool	Fixed::operator==(Fixed const &compareTo) const {
 	if (this->getRawBits() == rSym.getRawBits())
 		return true;
 	return false;
 }
 
-bool	Fixed::operator!=(Fixed const &rSym) const {
-	if (this->getRawBits() != rSym.getRawBits())
+bool	Fixed::operator!=(Fixed const &compareTo) const {
+	if (this->getRawBits() != compareTo.getRawBits())
 		return true;
 	return false;
 }
@@ -141,7 +141,7 @@ Fixed const &	Fixed::max(Fixed const &a, Fixed const &b) {
 	return b;
 }
 
-std::ostream&	operator<<(std::ostream& o, Fixed const &rSym) {
-	o << rSym.toFloat();
-	return o;
+std::ostream&	operator<<(std::ostream& output, Fixed const &fixedDigit) {
+	output << rSym.toFloat();
+	return output;
 }
