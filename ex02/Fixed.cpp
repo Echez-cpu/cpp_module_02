@@ -66,7 +66,7 @@ bool	Fixed::operator>=(Fixed const &compareTo) const {
 }
 
 bool	Fixed::operator==(Fixed const &compareTo) const {
-	if (this->getRawBits() == rSym.getRawBits())
+	if (this->getRawBits() == compareTo.getRawBits())
 		return true;
 	return false;
 }
@@ -142,6 +142,6 @@ Fixed const &	Fixed::max(Fixed const &a, Fixed const &b) {
 }
 
 std::ostream&	operator<<(std::ostream& output, Fixed const &fixedDigit) {
-	output << rSym.toFloat();
+	output << fixedDigit.toFloat();
 	return output;
 }
