@@ -10,8 +10,8 @@ int	main() {
 	Point	p(2.07f, 1.46f);
 
 	if (bsp(a, b, c, p) == true)
-		std::cout << "The point is inside the triangle." << std::endl;   // zero means it is on the line
+		 std::cout << "\033[32mThe point is inside the triangle.\033[0m" << std::endl;  // zero means it is on the line
 	else
-		std::cout << "The point is a vertex or on the edge or outside the traingle." << std::endl;
+		std::cout << "\033[31mThe point is a vertex or on the edge or outside the traingle.\033[0m" << std::endl;
 	return 0;
 }
