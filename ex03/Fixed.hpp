@@ -42,6 +42,6 @@ class Fixed {
 		static const int	bits = 8;
 };
 
-std::ostream&	operator<<(std::ostream& output, Fixed const &fixedDigit);
+std::ostream&	operator<<(std::ostream& output, Fixed const &fixedDigit);  // overloading "<<" to customize it
 
 #endif
