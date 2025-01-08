@@ -17,7 +17,7 @@ int	main() {
 }
 
 
-           Point	a(0.0f, 0.0f);
+         //Point	a(0.0f, 0.0f);
 	// Point	b(10.0f, 30.0f);
 	// Point	c(20.0f, 0.0f);
 	// Point	p(20.0f, 0.1f);
