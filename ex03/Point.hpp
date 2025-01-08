@@ -12,7 +12,6 @@ class Point {
 		~Point();
 
 		Point &	operator=(Point const &original_copy);
-		Point	operator-(Point const &rhSide);
 		
 		Fixed const	getX() const;
 		Fixed const	getY() const;
