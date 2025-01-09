@@ -6,7 +6,7 @@
 /*   By: pokpalae <pokpalae@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 12:03:19 by pokpalae          #+#    #+#             */
-/*   Updated: 2025/01/09 12:03:29 by pokpalae         ###   ########.fr       */
+/*   Updated: 2025/01/09 12:13:17 by pokpalae         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "Fixed.hpp"
 
 Fixed::Fixed() : value(0) {
-	std::cout << "Default constructor called" << std::endl;
+	std::cout << "\033[32mDefault constructor called\033[0m" << std::endl;
 }
 
 Fixed::Fixed(Fixed const &source) {
@@ -23,7 +23,7 @@ Fixed::Fixed(Fixed const &source) {
 }
 
 Fixed::~Fixed() {
-	std::cout << "Destructor called" << std::endl;
+	std::cout << "\033[31mDestructor called\033[0m" << std::endl;
 }
 
 Fixed&	Fixed::operator=(Fixed const &original_copy) {
@@ -40,3 +40,4 @@ int		Fixed::getRawBits() const {
 void	Fixed::setRawBits(int const raw) {
 	this->value = raw;
 }
+

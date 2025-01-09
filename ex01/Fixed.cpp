@@ -6,14 +6,14 @@
 /*   By: pokpalae <pokpalae@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 12:04:43 by pokpalae          #+#    #+#             */
-/*   Updated: 2025/01/09 12:07:49 by pokpalae         ###   ########.fr       */
+/*   Updated: 2025/01/09 12:17:05 by pokpalae         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
 Fixed::Fixed() : value(0) {
-	std::cout << "Default constructor called" << std::endl;
+	std::cout << "\033[32mDefault constructor called\033[0m" << std::endl;
 }
 
 Fixed::Fixed(Fixed const &source) {
@@ -32,14 +32,14 @@ Fixed::Fixed(const float f) : value(f) {
 }
 
 Fixed::~Fixed() {
-	std::cout << "Destructor called" << std::endl;
+	std::cout << "\033[31mDestructor called\033[0m" << std::endl;
 }
 
 Fixed&	Fixed::operator=(Fixed const &original_copy) {
 	std::cout << "Copy assignement operator called" << std::endl;
 	if (this != &original_copy)
 		this->value = original_copy.getRawBits();
-	return *this;          // Chained assignments allow you to write code like a = b = c;
+	return *this;          // Chained assignments allow me to write code like a = b = c;
 }
 
 int		Fixed::getRawBits() const {
@@ -63,3 +63,4 @@ std::ostream&	operator<<(std::ostream& output, Fixed const &original_copy) {   /
 	output << original_copy.toFloat();
 	return output;
 }
+
